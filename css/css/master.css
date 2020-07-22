@@ -1,0 +1,15 @@
+body {
+  font-family: "Lora", serif; }
+
+/*  ============= starting of  landing-page styles ===============================*/
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../img/1.jpg");
+  background-size: cover; }
+  .landing-page .logo {
+    font-size: 40px;
+    color: red; }
+
+/*  ============= ending  of  landing-page styles ===============================*/
+
+/*# sourceMappingURL=master.css.map */

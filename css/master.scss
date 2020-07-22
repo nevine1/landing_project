@@ -1,0 +1,444 @@
+@import "sass/_general.scss";
+
+/*  ============= starting of  setting-box styles ===============================*/
+.setting-box {
+  text-align: center;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  min-height: 100vh;
+  z-index: 1000;
+  transition: all 0.4s ease-in;
+  .toggle-setting {
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    right: -39px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+
+    .fa-gear {
+      padding: 5px;
+      width: 30px;
+    }
+  }
+
+  .setting-container {
+    .option-box {
+      padding: 10px;
+      background-color: #e8e5e5;
+      margin: 10px;
+      border-radius: 5px;
+
+      h4 {
+        margin: 0;
+        padding: 2px;
+        color: #555;
+        font-size: 14px;
+        padding: 5px;
+      }
+      .colors-list {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 3px;
+        li {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          cursor: pointer;
+          opacity: 0.5;
+          display: inline-block;
+
+          &:first-child {
+            background-color: red;
+          }
+          &:nth-child(2) {
+            background-color: rgb(49, 138, 165);
+          }
+          &:nth-child(3) {
+            background-color: grey;
+          }
+          &:nth-child(4) {
+            background-color: green;
+          }
+          &:nth-child(5) {
+            background-color: purple;
+          }
+        }
+      }
+    }
+    .random-background {
+      span {
+        background-color: #009688;
+        color: #fff;
+        padding: 3px 10px;
+        font-size: 12px;
+        margin-top: 10px;
+        border-radius: 3px;
+        opacity: 0.5;
+        cursor: pointer;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.open {
+    left: 0;
+  }
+}
+/*  ============= ending of    setting-box styles ===============================*/
+
+/*  ============= starting of  landing-page styles ===============================*/
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../img/1.jpg");
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s ease-in;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .header-area {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    .logo {
+      width: 300px;
+      padding: 15px;
+      font-size: 25px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .links {
+      list-style: none;
+      width: 100%; // ده الجزء المتبقى من عرض الهيدر بعد اللوجو
+      text-align: right;
+      padding-right: 30px;
+      li {
+        display: inline-block;
+        padding: 5px;
+        color: #fff;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 17px;
+          transition: all 0.5s;
+          &:hover,
+          &:active {
+            color: var(--main-clor);
+          }
+        }
+      }
+    }
+  }
+  .indroduction-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    color: #fff;
+    text-align: center;
+    h2 {
+      span {
+        color: var(--main-clor);
+      }
+    }
+    p {
+      padding: 15px 40px;
+      line-height: 30px;
+    }
+  }
+}
+
+/*  ========== ending  of  landing-page styles ===============================*/
+
+/*  ===============starting about us styles ===============================*/
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50;
+  display: flex;
+  .info-box {
+    flex: 1;
+    padding: 30px;
+    h2 {
+      font-weight: bold;
+      font-size: 30px;
+      color: var(--main-clor);
+      margin: 0 0 15px;
+    }
+    p {
+      color: #767676;
+      margin: 0;
+    }
+  }
+  .img-box {
+    flex: 1;
+    text-align: center;
+    img {
+      width: 50%;
+      border-radius: 5px;
+    }
+  }
+}
+/*  =============== ending about us styles ===============================*/
+
+/*  =============== starting our skills styles ===============================*/
+.skills {
+  padding: 40px;
+  background-color: #eaeaea;
+  h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-clor);
+    margin: 0 0 15px;
+    text-align: center;
+  }
+  .skill-box {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    text-align: center;
+    .skill-name {
+      color: #444;
+      width: 130px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+    .skill-progress {
+      height: 30px;
+      background-color: #f6f6f6;
+      width: calc(100% - 110px);
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      span {
+        position: absolute;
+        transition: all 0.5s;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+        background-color: var(--main-clor);
+        text-align: center;
+      }
+    }
+  }
+}
+/*  =============== ending our skills styles ===============================*/
+
+/*  =============== starting galleries styles ===============================*/
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-clor);
+    margin: 0 0 15px;
+    text-align: center;
+  }
+  .img-box {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    img {
+      background-color: #f6f6f6;
+      border: 1px solid #c2c2c2;
+      width: 200px;
+      padding: 3px;
+      margin: 0 2px;
+      cursor: pointer;
+    }
+  }
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: all 1s;
+}
+.popupBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+  background-color: #fff;
+  border: 1px solid #ccc;
+
+  h3 {
+    font-size: 19px;
+    text-align: center;
+    color: var(--main-clor);
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  img {
+    max-width: 100%;
+    transition: all 0.7s;
+  }
+  .close-Btn {
+    position: absolute;
+    top: -19px;
+    right: -20px;
+    color: #fff;
+    background-color: var(--main-clor);
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+/*  =============== starting galleries styles ===============================*/
+
+/*  =============== starting timeline styles ===============================*/
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+  .timeline-content {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: " ";
+      width: 2px;
+      height: 100%;
+      background-color: var(--main-clor);
+      position: absolute;
+      left: 50%;
+      margin-left: -2px;
+      top: 0;
+    }
+    .year {
+      position: relative;
+      background-color: var(--main-clor);
+      width: 50px;
+      margin: 20px auto;
+      z-index: 2;
+      text-align: center;
+      border-radius: 5px;
+      padding: 2px 5px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .left,
+    .right {
+      width: calc(50% - 25px);
+      margin-bottom: 20px;
+      position: relative;
+      .content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        h3 {
+          font-weight: bold;
+          color: var(--main-clor);
+          margin: 0 0 10px;
+        }
+        p {
+          color: #666;
+          margin: 0;
+          line-height: 1.9;
+        }
+      }
+      &:before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 3px solid var(--main-clor);
+        position: absolute;
+        top: 20px;
+      }
+    }
+    .left {
+      float: left;
+
+      &:before {
+        right: -35px;
+      }
+    }
+    .right {
+      float: right;
+      &:before {
+        left: -35px;
+      }
+    }
+    .clear-fix {
+      clear: both;
+    }
+  }
+}
+/*  =============== starting timeline styles ===============================*/
+
+/*  ========== starting styles of features  ===============================*/
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  margin: 0 100px;
+  .feat-box {
+    width: calc(100% / 3);
+    float: left;
+    margin-bottom: 40px;
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+      padding: 5px;
+      background-color: var(--main-clor);
+    }
+    h4 {
+      font-size: 22px;
+      margin: 10px 0 30px;
+      color: #555;
+      position: relative; // to add line under it and give the line absolute position
+      &:before {
+        content: " ";
+        position: absolute;
+        width: 75px;
+        height: 3px;
+        background-color: var(--main-clor);
+        left: 50%;
+        bottom: -13px;
+        transform: translate(-50%, -50%);
+      }
+    }
+    p {
+      color: #777;
+      line-height: 1.6;
+      width: 90%;
+      margin: 2px 20px;
+    }
+  }
+}
+
+/*  ========== ending  styles of features ===============================*/

@@ -1,0 +1,24 @@
+:root {
+  --main-clor: #458cdd;
+}
+
+body {
+  font-family: "Lora", serif;
+  line-height: 2;
+  height: 2000px;
+}
+
+.container {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-clor);
+  margin: 0 0 15px;
+  text-align: center;
+}

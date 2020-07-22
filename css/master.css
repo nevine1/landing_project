@@ -1,0 +1,384 @@
+:root {
+  --main-clor: #458cdd; }
+
+body {
+  font-family: "Lora", serif;
+  line-height: 2;
+  height: 2000px; }
+
+.container {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto; }
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-clor);
+  margin: 0 0 15px;
+  text-align: center; }
+
+/*  ============= starting of  setting-box styles ===============================*/
+.setting-box {
+  text-align: center;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  min-height: 100vh;
+  z-index: 1000;
+  transition: all 0.4s ease-in; }
+  .setting-box .toggle-setting {
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    right: -39px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer; }
+    .setting-box .toggle-setting .fa-gear {
+      padding: 5px;
+      width: 30px; }
+  .setting-box .setting-container .option-box {
+    padding: 10px;
+    background-color: #e8e5e5;
+    margin: 10px;
+    border-radius: 5px; }
+    .setting-box .setting-container .option-box h4 {
+      margin: 0;
+      padding: 2px;
+      color: #555;
+      font-size: 14px;
+      padding: 5px; }
+    .setting-box .setting-container .option-box .colors-list {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 3px; }
+      .setting-box .setting-container .option-box .colors-list li {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.5;
+        display: inline-block; }
+        .setting-box .setting-container .option-box .colors-list li:first-child {
+          background-color: red; }
+        .setting-box .setting-container .option-box .colors-list li:nth-child(2) {
+          background-color: #318aa5; }
+        .setting-box .setting-container .option-box .colors-list li:nth-child(3) {
+          background-color: grey; }
+        .setting-box .setting-container .option-box .colors-list li:nth-child(4) {
+          background-color: green; }
+        .setting-box .setting-container .option-box .colors-list li:nth-child(5) {
+          background-color: purple; }
+  .setting-box .setting-container .random-background span {
+    background-color: #009688;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 12px;
+    margin-top: 10px;
+    border-radius: 3px;
+    opacity: 0.5;
+    cursor: pointer; }
+    .setting-box .setting-container .random-background span.active {
+      opacity: 1; }
+  .setting-box.open {
+    left: 0; }
+
+/*  ============= ending of    setting-box styles ===============================*/
+/*  ============= starting of  landing-page styles ===============================*/
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../img/1.jpg");
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s ease-in; }
+  .landing-page .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+  .landing-page .header-area {
+    position: relative;
+    z-index: 20;
+    display: flex; }
+    .landing-page .header-area .logo {
+      width: 300px;
+      padding: 15px;
+      font-size: 25px;
+      color: red;
+      font-weight: bold; }
+    .landing-page .header-area .links {
+      list-style: none;
+      width: 100%;
+      text-align: right;
+      padding-right: 30px; }
+      .landing-page .header-area .links li {
+        display: inline-block;
+        padding: 5px;
+        color: #fff; }
+        .landing-page .header-area .links li a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 17px;
+          transition: all 0.5s; }
+          .landing-page .header-area .links li a:hover, .landing-page .header-area .links li a:active {
+            color: var(--main-clor); }
+  .landing-page .indroduction-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    color: #fff;
+    text-align: center; }
+    .landing-page .indroduction-text h2 span {
+      color: var(--main-clor); }
+    .landing-page .indroduction-text p {
+      padding: 15px 40px;
+      line-height: 30px; }
+
+/*  ========== ending  of  landing-page styles ===============================*/
+/*  ===============starting about us styles ===============================*/
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50;
+  display: flex; }
+  .about-us .info-box {
+    flex: 1;
+    padding: 30px; }
+    .about-us .info-box h2 {
+      font-weight: bold;
+      font-size: 30px;
+      color: var(--main-clor);
+      margin: 0 0 15px; }
+    .about-us .info-box p {
+      color: #767676;
+      margin: 0; }
+  .about-us .img-box {
+    flex: 1;
+    text-align: center; }
+    .about-us .img-box img {
+      width: 50%;
+      border-radius: 5px; }
+
+/*  =============== ending about us styles ===============================*/
+/*  =============== starting our skills styles ===============================*/
+.skills {
+  padding: 40px;
+  background-color: #eaeaea; }
+  .skills h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-clor);
+    margin: 0 0 15px;
+    text-align: center; }
+  .skills .skill-box {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    text-align: center; }
+    .skills .skill-box .skill-name {
+      color: #444;
+      width: 130px;
+      font-weight: bold;
+      line-height: 30px; }
+    .skills .skill-box .skill-progress {
+      height: 30px;
+      background-color: #f6f6f6;
+      width: calc(100% - 110px);
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden; }
+      .skills .skill-box .skill-progress span {
+        position: absolute;
+        transition: all 0.5s;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+        background-color: var(--main-clor);
+        text-align: center; }
+
+/*  =============== ending our skills styles ===============================*/
+/*  =============== starting galleries styles ===============================*/
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .gallery h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-clor);
+    margin: 0 0 15px;
+    text-align: center; }
+  .gallery .img-box {
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+    .gallery .img-box img {
+      background-color: #f6f6f6;
+      border: 1px solid #c2c2c2;
+      width: 200px;
+      padding: 3px;
+      margin: 0 2px;
+      cursor: pointer; }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: all 1s; }
+
+.popupBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+  background-color: #fff;
+  border: 1px solid #ccc; }
+  .popupBox h3 {
+    font-size: 19px;
+    text-align: center;
+    color: var(--main-clor);
+    margin: 0 0 10px;
+    padding: 0; }
+  .popupBox img {
+    max-width: 100%;
+    transition: all 0.7s; }
+  .popupBox .close-Btn {
+    position: absolute;
+    top: -19px;
+    right: -20px;
+    color: #fff;
+    background-color: var(--main-clor);
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px; }
+
+/*  =============== starting galleries styles ===============================*/
+/*  =============== starting timeline styles ===============================*/
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee; }
+  .timeline .timeline-content {
+    position: relative;
+    overflow: hidden; }
+    .timeline .timeline-content:before {
+      content: " ";
+      width: 2px;
+      height: 100%;
+      background-color: var(--main-clor);
+      position: absolute;
+      left: 50%;
+      margin-left: -2px;
+      top: 0; }
+    .timeline .timeline-content .year {
+      position: relative;
+      background-color: var(--main-clor);
+      width: 50px;
+      margin: 20px auto;
+      z-index: 2;
+      text-align: center;
+      border-radius: 5px;
+      padding: 2px 5px;
+      color: #fff;
+      font-weight: bold; }
+    .timeline .timeline-content .left,
+    .timeline .timeline-content .right {
+      width: calc(50% - 25px);
+      margin-bottom: 20px;
+      position: relative; }
+      .timeline .timeline-content .left .content,
+      .timeline .timeline-content .right .content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px; }
+        .timeline .timeline-content .left .content h3,
+        .timeline .timeline-content .right .content h3 {
+          font-weight: bold;
+          color: var(--main-clor);
+          margin: 0 0 10px; }
+        .timeline .timeline-content .left .content p,
+        .timeline .timeline-content .right .content p {
+          color: #666;
+          margin: 0;
+          line-height: 1.9; }
+      .timeline .timeline-content .left:before,
+      .timeline .timeline-content .right:before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 3px solid var(--main-clor);
+        position: absolute;
+        top: 20px; }
+    .timeline .timeline-content .left {
+      float: left; }
+      .timeline .timeline-content .left:before {
+        right: -35px; }
+    .timeline .timeline-content .right {
+      float: right; }
+      .timeline .timeline-content .right:before {
+        left: -35px; }
+    .timeline .timeline-content .clear-fix {
+      clear: both; }
+
+/*  =============== starting timeline styles ===============================*/
+/*  ========== starting styles of features  ===============================*/
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  margin: 0 100px; }
+  .features .feat-box {
+    width: calc(100% / 3);
+    float: left;
+    margin-bottom: 40px; }
+    .features .feat-box img {
+      width: 150px;
+      border-radius: 50%;
+      padding: 5px;
+      background-color: var(--main-clor); }
+    .features .feat-box h4 {
+      font-size: 22px;
+      margin: 10px 0 30px;
+      color: #555;
+      position: relative; }
+      .features .feat-box h4:before {
+        content: " ";
+        position: absolute;
+        width: 75px;
+        height: 3px;
+        background-color: var(--main-clor);
+        left: 50%;
+        bottom: -13px;
+        transform: translate(-50%, -50%); }
+    .features .feat-box p {
+      color: #777;
+      line-height: 1.6;
+      width: 90%;
+      margin: 2px 20px; }
+
+/*  ========== ending  styles of features ===============================*/
+
+/*# sourceMappingURL=master.css.map */
