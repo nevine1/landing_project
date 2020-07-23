@@ -16,7 +16,7 @@ let settingBox = document.querySelector(".setting-box");
 
 spin.onclick = function () {
   //adding fa-spin(rotating the gear-box icon) when clicking on gear icon
-  this.classList.toggleClass("fa-spin"); //if using jquery , u can user $(this).toggleClass('fa-spin)
+  this.classList.toggle("fa-spin"); //if using jquery , u can user $(this).toggleClass('fa-spin)
 
   //showing the setting box when click on fa-gear icon
   settingBox.classList.toggle("open");
