@@ -1,3 +1,14 @@
+//check if there is local storage color option
+let mainColors = localStorage.getItem("color_option");
+
+//if mainColors is not empty, so we can set this local storage, and then take this value and put it in the root element
+// you can set the value of local storage, when you set the value of the root (when changing the color box option)
+if (mainColors !== null) {
+  console.log(
+    "main colors is not empty , so you can set it add this value to the root  "
+  );
+}
+
 //changing landing-page background
 var landing2 = document.querySelector(".landing-page");
 
@@ -6,8 +17,6 @@ setInterval(() => {
   var randNumb = Math.floor(Math.random() * myimgList.length);
 
   landing2.style.backgroundImage = 'url("img/' + myimgList[randNumb] + '")';
-
-  console.log('url("img/' + myimgList[randNumb] + ")");
 }, 2000);
 
 // ============================ click on gear to show the all setting  ========================
@@ -18,7 +27,7 @@ spin.onclick = function () {
   //adding fa-spin(rotating the gear-box icon) when clicking on gear icon
   this.classList.toggle("fa-spin"); //if using jquery , u can user $(this).toggleClass('fa-spin)
 
-  //showing the setting box when click on fa-gear icon
+  //showing and hiding the setting box when click on fa-gear icon
   settingBox.classList.toggle("open");
 };
 
@@ -29,12 +38,27 @@ let colorList = document.querySelectorAll(".colors-list li");
 colorList.forEach(function (li) {
   // click on every list item
   li.addEventListener("click", function (e) {
+    //e.target   يعنى بعمل تارجت للعنصر اللى بعمل عليه كليك
     console.log(e.target.dataset.color);
     //set property color on root
     document.documentElement.style.setProperty(
       "--main-clor",
       e.target.dataset.color
     );
+
+    //set the color on root localstorage.setItem(name, value), it means I added the color of the item  I will click  to the local storage
+    localStorage.setItem("color_option", e.target.dataset.color);
+
+    //so we need to remove active class from all children, and add the active class to the item I click,
+    //to do that , you should use foreach to remove active class for each li we click
+    e.target.parentElement
+      .querySelectorAll(".active")
+      .forEach(function (element) {
+        element.classList.remove("active");
+      });
+
+    //adding "active" class on li I will click on it
+    e.target.classList.add("active");
   });
 });
 

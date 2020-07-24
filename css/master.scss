@@ -68,6 +68,10 @@
           &:nth-child(5) {
             background-color: purple;
           }
+
+          &.active {
+            opacity: 1;
+          }
         }
       }
     }
